@@ -11,7 +11,7 @@ FILE *openFile(FILE *fp, char crka) {
         fp = fopen("font/exclamation.txt", "r");
         if (DEBUG) printf("Exclamation\n");
     } else {
-        char imeDat[11] = {'f', 'o', 'n', 't', '/', crka, '.', 't', 'x', 't', '\0'};
+        char imeDat[11] = {'f', 'o', 'n', 't', '/', tolower(crka), '.', 't', 'x', 't', '\0'};
         if (DEBUG) printf("Datoteka: %s\n", imeDat);
         fp = fopen(imeDat, "r");
     }
